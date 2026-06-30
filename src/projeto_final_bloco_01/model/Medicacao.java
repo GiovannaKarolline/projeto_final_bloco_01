@@ -5,9 +5,9 @@ public class Medicacao extends Produto{
 	String funcao;
 	boolean exigePrescricao;
 	
-	public Medicacao(int id, String nome, float preco, int tipoAnimal, int tipoUso, String funcao,
+	public Medicacao(int id, String nome, int categoria, float preco, int tipoAnimal, int tipoUso, String funcao,
 			boolean exigePrescricao) {
-		super(id, nome, preco, tipoAnimal);
+		super(id, nome, categoria, preco, tipoAnimal);
 		this.tipoUso = tipoUso;
 		this.funcao = funcao;
 		this.exigePrescricao = exigePrescricao;
@@ -39,16 +39,28 @@ public class Medicacao extends Produto{
 
 	@Override
 	public void visualizar() {
-		String exigePrescricao = "";
+		String exigePrescricao = "", tipoUso = "";
 		
 		if(this.exigePrescricao) {
 			exigePrescricao = "Sim";
 		}else {
 			exigePrescricao = "Não";
 		}
+		
+		switch(this.tipoUso) {
+		case 1:
+			tipoUso = "Uso tópico";
+			break;
+		case 2:
+			tipoUso = "Ingestão";
+			break;
+		case 3:
+			tipoUso = "Injetável";
+			break;
+		}
 
 		super.visualizar();
-		System.out.println("Tipo de Uso: " + this.tipoUso);
+		System.out.println("Tipo de Uso: " + tipoUso);
 		System.out.println("Função: " + this.funcao);
 		System.out.println("Exige prescrição? " + exigePrescricao);
 	}

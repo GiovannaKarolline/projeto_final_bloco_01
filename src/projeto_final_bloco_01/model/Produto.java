@@ -7,10 +7,11 @@ public abstract class Produto {
 	int tipoAnimal;
 	int categoria;
 	
-	public Produto(int id, String nome, float preco, int tipoAnimal) {
+	public Produto(int id, String nome, int categoria, float preco, int tipoAnimal) {
 		super();
 		this.id = id;
 		this.nome = nome;
+		this.categoria = categoria;
 		this.preco = preco;
 		this.tipoAnimal = tipoAnimal;
 	}
@@ -47,6 +48,10 @@ public abstract class Produto {
 		this.tipoAnimal = tipoAnimal;
 	}
 	
+	public int getCategoria() {
+		return categoria;
+	}
+
 	public void visualizar() {
 
 		String categoria = "", tipoAnimal = "";

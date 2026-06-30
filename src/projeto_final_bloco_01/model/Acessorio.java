@@ -4,8 +4,8 @@ public class Acessorio extends Produto{
 	String material;
 	int porteAnimal;
 	
-	public Acessorio(int id, String nome, float preco, int tipoAnimal, String material, int porteAnimal) {
-		super(id, nome, preco, tipoAnimal);
+	public Acessorio(int id, String nome, int categoria, float preco, int tipoAnimal, String material, int porteAnimal) {
+		super(id, nome, categoria, preco, tipoAnimal);
 		this.material = material;
 		this.porteAnimal = porteAnimal;
 	}

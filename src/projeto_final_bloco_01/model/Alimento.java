@@ -4,8 +4,8 @@ public class Alimento extends Produto{
 	int pesoEmGramas;
 	String sabor;
 	
-	public Alimento(int id, String nome, float preco, int tipoAnimal, int pesoEmGramas, String sabor) {
-		super(id, nome, preco, tipoAnimal);
+	public Alimento(int id, String nome, int categoria, float preco, int tipoAnimal, int pesoEmGramas, String sabor) {
+		super(id, nome, categoria, preco, tipoAnimal);
 		this.pesoEmGramas = pesoEmGramas;
 		this.sabor = sabor;
 	}
